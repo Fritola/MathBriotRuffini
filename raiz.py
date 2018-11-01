@@ -1,12 +1,12 @@
 coeficientes = []
-#n e seus derivados sao os novos coeficientes
+# n e seus derivados sao os novos coeficientes
 
 while True:
     try:
         raiz = int(input("Qual a raíz da sua equação? "))
         grau = int(input("Qual o grau da sua equação?(a partir do terceiro) "))
 
-        if grau == 3:            
+        if grau == 3:
             for x in range(0, 3):
                 novo_coef = coeficientes.append(input("Insira o coeficiente "))
             print("\n")
@@ -24,7 +24,8 @@ while True:
                         n = (int(c1)*raiz)+int(c2)
                         n1 = (n*raiz)+int(c3)
                         n2 = (n1*raiz)+int(termoI)
-                    print("Seus novos coeficientes sao: "+str(n)+" "+str(n1)+" "+str(n2))
+                    print("Seus novos coeficientes sao: " +
+                          str(n)+" "+str(n1)+" "+str(n2))
             break
         elif grau == 4:
             for x in range(0, 4):
@@ -34,7 +35,6 @@ while True:
             for i, item in enumerate(coeficientes, start=1):
                 print("Coeficiente "+str(i)+": "+item)
             termoI = input("Digite o termo independente ")
-
 
             for coeficiente in coeficientes[0]:
                 c1 = coeficiente
@@ -48,7 +48,8 @@ while True:
                             n1 = (n*raiz)+int(c3)
                             n2 = (n1*raiz)+int(c4)
                             n3 = (n2*raiz)+int(termoI)
-                    print("Seus novos coeficientes sao: "+str(n)+" "+str(n1)+" "+str(n2)+" "+str(n3))
+                    print("Seus novos coeficientes sao: "+str(n) +
+                          " "+str(n1)+" "+str(n2)+" "+str(n3))
             break
         elif grau == 5:
             for x in range(0, 5):
@@ -58,7 +59,6 @@ while True:
             for i, item in enumerate(coeficientes, start=1):
                 print("Coeficiente "+str(i)+": "+item)
             termoI = input("Digite o termo independente ")
-
 
             for coeficiente in coeficientes[0]:
                 c1 = coeficiente
@@ -75,10 +75,11 @@ while True:
                                 n2 = (n1*raiz)+int(c4)
                                 n3 = (n2*raiz)+int(c5)
                                 n4 = (n3*raiz)+int(termoI)
-                    print("Seus novos coeficientes sao: "+str(n)+" "+str(n1)+" "+str(n2)+" "+str(n3)+" "+str(n4))
-            break        
+                    print("Seus novos coeficientes sao: "+str(n)+" " +
+                          str(n1)+" "+str(n2)+" "+str(n3)+" "+str(n4))
+            break
     except ValueError:
         print("ERRO VALOR NAO ENCONTRADO")
     else:
-            print("Valor incomper")
-            break
+        print("Valor incomper")
+        break
